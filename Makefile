@@ -15,3 +15,4 @@ shared: $(OBJ)
 
 example: static
 	$(CC) examples/main.c -L. -lconversion -Iinclude -o main
+	$(CC) examples/mainsi.c -L. -lconversion -Iinclude -o mainsi

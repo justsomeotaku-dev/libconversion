@@ -24,11 +24,11 @@ int main() {
     char* unit_names[] = {"seconds", "minutes", "hours", "days"};
     int from_unit = 0;  // 0 = seconds
     int to_unit = 1;    // 1 = minutes
-    double value = 100; // 100 seconds
+    float value = 100; // 100 seconds
 
-    double result = convert_time(from_unit, to_unit, value);
+    float result = convert_time(from_unit, to_unit, value);
 
-    printf("\n%.2f %s = %.2f %s",
+    printf("\n%.2g %s = %.2g %s",
     value, unit_names[from_unit],
     result, unit_names[to_unit]);
 
