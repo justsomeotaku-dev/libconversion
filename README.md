@@ -1,5 +1,5 @@
 # libconversion
-A lightweight C library providing functions libconversion for converting between common units of measurement. It is designed to make unit conversions easy, fast, and reliable.
+A lightweight C library providing functions for converting between common units of measurement. It is designed to make unit conversions easy, fast, and reliable.
 # Build the Library
 Clone the repository and build using make:
 # Manual install
