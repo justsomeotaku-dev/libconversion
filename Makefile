@@ -1,0 +1,17 @@
+CC = gcc
+CFLAGS = -Wall -Wextra -Iinclude
+
+LIB_NAME = libconversion
+SRC = src/timeconv.c
+OBJ = $(SRC:.c=.o)
+
+all: static shared example
+
+static: $(OBJ)
+	ar rcs $(LIB_NAME).a $(OBJ)
+
+shared: $(OBJ)
+	$(CC) -shared -o $(LIB_NAME).so $(OBJ)
+
+example: static
+	$(CC) examples/main.c -L. -lconversion -Iinclude -o main
