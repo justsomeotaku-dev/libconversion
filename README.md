@@ -35,5 +35,13 @@ int main() {
     return 0;
 }
 ```
+```C
+0 yoctosecond    1 zeptosecond   2 attosecond     3 femtosecond
+4 picosecond     5 nanosecond    6 microsecond    7 millisecond
+8 second         9 kilosecond    10 megasecond    11 gigasecond
+12 terasecond    13 petasecond   14 exasecond     15 zettasecond
+16 yottasecond
+```
+
 # Feedback
 I am open to any feedback, issue or improvement. 
