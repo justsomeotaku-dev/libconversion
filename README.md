@@ -1,39 +1,37 @@
-# libeven
-A lightweight C library providing functions to check if an integer is even/odd. It includes both a standard and a bitwise-optimized implementation.
+# libconversion
+A lightweight C library providing functions libconversion for converting between common units of measurement. It is designed to make unit conversions easy, fast, and reliable.
 # Build the Library
 Clone the repository and build using make:
 # Manual install
 ```bash
-git clone https://github.com/justsomeotaku-dev/libeven/
-cd libeven
+git clone https://github.com/justsomeotaku-dev/libconversion/
+cd libconversion
 make static   # build static library
 make shared   # build shared library
 make example  # build demo program
 ```
 # Automatic install
 ```bash
-git clone https://github.com/justsomeotaku-dev/libeven/
-cd libeven
+git clone https://github.com/justsomeotaku-dev/libconversion/
+cd libconversion
 make          # build library + demo
 ```
 # Example usage
 ```C
-#include "even.h"
+#include "conversion.h"
 
 int main() {
-    int number = 42;
-    if (is_even(number)) {
-        printf("%d is even\n", number);
-    }
-    if (is_even_fast(number)) {
-        printf("%d is odd (fast check)\n", number);
-    }
-    if (is_odd(number)) {
-        printf("%d is even\n", number);
-    }
-    if (is_odd_fast(number)) {
-        printf("%d is odd (fast check)\n", number);
-    }
+    char* unit_names[] = {"seconds", "minutes", "hours", "days"};
+    int from_unit = 0;  // 0 = seconds
+    int to_unit = 1;    // 1 = minutes
+    double value = 100; // 100 seconds
+
+    double result = convert_time(from_unit, to_unit, value);
+
+    printf("\n%.2f %s = %.2f %s",
+    value, unit_names[from_unit],
+    result, unit_names[to_unit]);
+
     return 0;
 }
 ```

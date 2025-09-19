@@ -10,7 +10,7 @@ int main() {
     printf("0 = seconds\n1 = minutes\n2 = hours\n3 = days\n\n");
 
     printf("Convert FROM which unit? (0-3): ");
-    scanf("%d", &from_unit);
+    scanf("%d", &from_unit); 
 
     printf("Enter the value: ");
     scanf("%lf", &value);
